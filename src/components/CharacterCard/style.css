@@ -1,0 +1,33 @@
+.character__Cards {
+    transition: box-shadow 0.5s ease;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+    margin-bottom: 2rem;
+}
+
+.character__Cards:hover {
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.character__Cards .card-title {
+    font-size: 19px;
+}
+.character__Cards .text-reduce{
+       overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.character__Cards img {
+    height: 400px;
+    max-width: 100%;
+}
+
+.character__cards__href {
+    cursor: pointer;
+    color: black;
+}
+
+.character__cards__href:hover {
+    color: black;
+}
