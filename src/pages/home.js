@@ -55,7 +55,7 @@ const ConnectedHomePage = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const characters = useSelector((state) => state.characters);
+  const characters = useSelector((state) => state.results);
 
   const handleSearchFunc = (event) => {
     let search_text = event.target.value.toLowerCase();

@@ -1,5 +1,5 @@
 import { API } from "./api";
-import { findCharacterIndex } from "./../helpers/shared";
+import { findCharacterIndex, updateCharacter } from "./../helpers/shared";
 export const REQUEST_CHARACTERS = "REQUEST_CHARACTERS";
 export const RECEIVE_CHARACTERS = "RECEIVE_CHARACTERS";
 export const REQUEST_SINGLE_CHARACTER = "REQUEST_SINGLE_CHARACTER";
@@ -54,13 +54,10 @@ export const fetchCharacters = () => {
       }
       const data = await response.json();
       if (characterUpdated && characterUpdated.length) {
-        characterUpdated.map((char) => {
-          const foundIndex = findCharacterIndex(
-            data.data.results,
-            parseInt(char.id)
-          );
-          data.data.results[foundIndex] = char;
-        });
+        data.data.results = updateCharacter(
+          characterUpdated,
+          data.data.results
+        );
       }
       setTimeout(() => {
         //timeout so i can enjoy the animation of the loader
@@ -75,7 +72,7 @@ export const fetchCharacters = () => {
 
 export const publishUpdatedCharacter = (character) => {
   return (dispatch, getState) => {
-    const characters = getState().characters;
+    const characters = getState().results;
 
     const foundIndex = findCharacterIndex(characters, parseInt(character.id));
     characters[foundIndex] = character;
@@ -96,13 +93,10 @@ export const fetchSingleCharacter = (id) => {
       }
       const data = await response.json();
       if (characterUpdated && characterUpdated.length) {
-        characterUpdated.map((char) => {
-          const foundIndex = findCharacterIndex(
-            data.data.results,
-            parseInt(char.id)
-          );
-          data.data.results[foundIndex] = { ...char };
-        });
+        data.data.results = updateCharacter(
+          characterUpdated,
+          data.data.results
+        );
       }
       setTimeout(() => {
         //timeout so i can enjoy the animation of the loader

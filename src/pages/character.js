@@ -63,7 +63,7 @@ const ConnectedCharacterPage = (props) => {
   useEffect(() => {
     dispatch(fetchSingleCharacter(id));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    if (!character.thumbnail.extension) {
+    if (character && !character.thumbnail.extension) {
       let img = document.getElementsByClassName(`character-${id}`);
       img[0].src = character.thumbnail.path;
       getBase64Image(img[0]);
@@ -71,7 +71,7 @@ const ConnectedCharacterPage = (props) => {
   }, [id]);
 
   const character = useSelector((state) =>
-    state.characters.find((character) => character.id === parseInt(id))
+    state.results.find((character) => character.id === parseInt(id))
   );
 
   const updateCharacter = (e) => {

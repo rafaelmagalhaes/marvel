@@ -17,7 +17,7 @@ const persistConfig = {
 const characters = (
   state = {
     isFetching: false,
-    characters: [],
+    results: [],
     characterUpdated: [],
   },
   action
@@ -38,15 +38,13 @@ const characters = (
     case RECEIVE_CHARACTERS:
       return Object.assign({}, state, {
         isFetching: false,
-        offset: action.data.offset,
-        limit: action.data.limit,
-        total: action.data.total,
-        count: action.data.count,
-        characters: mergeById(action.data.results, state.characters),
+        ...action.data,
+        total: 40, //overrider the total
+        results: mergeById(action.data.results, state.results),
       });
     case UPDATE_CHARACTER:
       return Object.assign({}, state, {
-        characters: mergeById(state.characters, [action.character]),
+        results: mergeById(state.results, [action.character]),
         characterUpdated: state.characterUpdated.length
           ? mergeById([action.character], state.characterUpdated)
           : [...state.characterUpdated, action.character],
@@ -54,7 +52,7 @@ const characters = (
     case RECEIVE_SINGLE_CHARACTER:
       return Object.assign({}, state, {
         isFetching: false,
-        characters: mergeById(action.characters, state.characters),
+        results: mergeById(action.characters, state.results),
       });
     default:
       return state;
