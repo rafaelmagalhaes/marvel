@@ -47,7 +47,9 @@ const characters = (
     case UPDATE_CHARACTER:
       return Object.assign({}, state, {
         characters: mergeById(state.characters, [action.character]),
-        characterUpdated: [...state.characterUpdated, action.character],
+        characterUpdated: state.characterUpdated.length
+          ? mergeById([action.character], state.characterUpdated)
+          : [...state.characterUpdated, action.character],
       });
     case RECEIVE_SINGLE_CHARACTER:
       return Object.assign({}, state, {

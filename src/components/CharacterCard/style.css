@@ -10,17 +10,27 @@
 }
 
 .character__Cards .card-title {
-    font-size: 19px;
+    font-size: 17px;
 }
-.character__Cards .text-reduce{
-       overflow: hidden;
+
+.character__Cards .text-reduce {
+    overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
-.character__Cards img {
-    height: 400px;
-    max-width: 100%;
+
+.character__Cards .image-container {
+   position: relative;
+    display: inline-block;
+    height: 250px;
+}
+
+.character__Cards .image-container img {
+   width: 100%;
+    height: 100%;
+    object-fit: fill;
+    float: left;
 }
 
 .character__cards__href {

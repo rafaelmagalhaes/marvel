@@ -8,7 +8,7 @@ const Index = ({ title, items }) => {
       </h5>
       {items.length ? (
         <ul>
-          {items.map((item, index) => (
+          {items.slice(0, 3).map((item, index) => (
             <li key={index}>{item.name}</li>
           ))}
         </ul>

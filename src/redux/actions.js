@@ -1,5 +1,5 @@
 import { API } from "./api";
-import { findCharacterIndex, mergeById } from "./../helpers/shared";
+import { findCharacterIndex } from "./../helpers/shared";
 export const REQUEST_CHARACTERS = "REQUEST_CHARACTERS";
 export const RECEIVE_CHARACTERS = "RECEIVE_CHARACTERS";
 export const REQUEST_SINGLE_CHARACTER = "REQUEST_SINGLE_CHARACTER";
@@ -59,13 +59,13 @@ export const fetchCharacters = () => {
             data.data.results,
             parseInt(char.id)
           );
-          data.data.results[foundIndex] = { ...char };
+          data.data.results[foundIndex] = char;
         });
       }
       setTimeout(() => {
         //timeout so i can enjoy the animation of the loader
         return dispatch(receiveCharacters(data.data));
-      }, 3000);
+      }, 1500);
     } catch (error) {
       console.log(error);
       dispatch(receiveError());
@@ -107,7 +107,7 @@ export const fetchSingleCharacter = (id) => {
       setTimeout(() => {
         //timeout so i can enjoy the animation of the loader
         return dispatch(receiveSingleCharacter(data.data));
-      }, 3000);
+      }, 1500);
     } catch (error) {
       dispatch(receiveError());
       console.log(error);

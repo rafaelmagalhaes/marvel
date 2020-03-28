@@ -4,9 +4,9 @@ import {
   publishUpdatedCharacter,
 } from "../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
-import CharacterCard from "../components/CharacterCard";
+import CharacterDetail from "../components/CharacterDetail";
 import Modal from "../components/Modal";
-import { base64 } from "../helpers/shared";
+import { base64, getBase64Image } from "../helpers/shared";
 import Loader from "../components/Loader";
 const CharacterPage = (props) => {
   const {
@@ -25,7 +25,7 @@ const CharacterPage = (props) => {
         <Loader />
       ) : (
         <div>
-          <CharacterCard
+          <CharacterDetail
             id={id}
             name={character.name}
             thumbnail={character.thumbnail}
@@ -63,6 +63,11 @@ const ConnectedCharacterPage = (props) => {
   useEffect(() => {
     dispatch(fetchSingleCharacter(id));
     // eslint-disable-next-line react-hooks/exhaustive-deps
+    if (!character.thumbnail.extension) {
+      let img = document.getElementsByClassName(`character-${id}`);
+      img[0].src = character.thumbnail.path;
+      getBase64Image(img[0]);
+    }
   }, [id]);
 
   const character = useSelector((state) =>
