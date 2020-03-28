@@ -1,0 +1,363 @@
+/* Image */
+$o: rgb(252, 174, 80);
+$oT: rgba(252, 174, 80, 0);
+
+$r: rgb(244, 56, 55);
+$rT: rgba(244, 56, 55, 0);
+
+$b: rgb(61, 138, 249);
+$bT: rgba(61, 138, 249, 0);
+
+$p: rgb(196, 53, 159);
+$pT: rgba(196, 53, 159, 0);
+
+$gr: rgb(94, 170, 63);
+$grT: rgba(94, 170, 63, 0);
+
+$y: rgb(251, 215, 23);
+$yT: rgba(251, 215, 23, 0);
+
+$go: rgb(251, 152, 51);
+$goT: rgba(251, 152, 51, 0);
+
+$mgo: rgb(237, 132, 46);
+$mgoT: rgba(237, 132, 6, 0);
+
+$dgo: rgb(208, 119, 36);
+$dgoT: rgba(208, 119, 36, 0);
+
+$bk: rgb(68, 68, 68);
+$bkT: rgba(68, 68, 68, 0);
+
+$w: rgba(255, 255, 255, 0.5);
+$ow: rgb(255, 255, 255);
+$wT: rgba(255, 255, 255, 0);
+
+.infinity-gauntlet {
+  background: /** hand **/
+          /* stones */
+          radial-gradient(0.4em 0.4em at 6em 9em, $w 49%, $wT 50%),
+          radial-gradient(2.2em 3em at 6em 9.4em, $o 0.55em, $bk 0.6em, $bk 0.75em, $mgo 0.8em, $mgo 1.05em, $mgoT 1.1em),
+          radial-gradient(0.4em 0.4em at 8.6em 9em, $w 49%, $wT 50%),
+          radial-gradient(2.2em 3em at 8.6em 9.4em, $r 0.55em, $bk 0.6em, $bk 0.75em, $mgo 0.8em, $mgo 1.05em, $mgoT 1.1em),
+          radial-gradient(0.4em 0.4em at 11.3em 9em, $w 49%, $wT 50%),
+          radial-gradient(2.2em 3em at 11.3em 9.4em, $b 0.55em, $bk 0.6em, $bk 0.75em, $mgo 0.8em, $mgo 1.05em, $mgoT 1.1em),
+          radial-gradient(0.4em 0.4em at 13.9em 9em, $w 49%, $wT 50%),
+          radial-gradient(2.2em 3em at 13.9em 9.4em, $p 0.55em, $bk 0.6em, $bk 0.75em, $mgo 0.8em, $mgo 1.05em, $mgoT 1.1em),
+          radial-gradient(0.6em 0.6em at 10em 13.7em, $w 49%, $wT 50%),
+          radial-gradient(3.7em 5.3em at 10em 14.6em, $y 1.1em, $bk 1.15em, $bk 1.4em, $go 1.45em, $go 49.5%, $goT 50%),
+            /* lower-left wing of yellow stone base */
+          linear-gradient(45deg, $goT 50%, $go 50%) 8em 17em / 0.6em 0.6em,
+          linear-gradient($bk, $bk) 6em 14.3em / 1.4em 0.4em,
+          linear-gradient($bk, $bk) 6.3em 15em / 0.9em 0.2em,
+          linear-gradient($bk, $bk) 6.7em 15.7em / 0.9em 0.2em,
+          linear-gradient($bk, $bk) 7em 16.4em / 0.9em 0.2em,
+          linear-gradient(60deg, $bkT 1.55em, $bk 1.6em, $bk 1.95em, $bkT 2em) 5.8em 14.3em / 2em 3.5em,
+          linear-gradient(-45deg, $bkT 0.45em, $bk 0.5em, $bk 0.85em, $bkT 0.9em) 7.7em 17em / 0.8em 0.8em,
+            /* upper-left wing outside yellow stone base */
+          linear-gradient(-45deg, $go 50%, $goT 50%) 6.6em 13.4em / 1em 1em,
+          radial-gradient(125% 200% at 100% 0%, $go 49%, $goT 50%) 6.65em 12.3em / 1.5em 0.1em,
+          radial-gradient(125% 200% at 100% 0%, $bk 49%, $bkT 50%) 6.4em 12.3em / 1.5em 0.3em,
+          radial-gradient(200% 130% at 100% 30%, $go 49%, $goT 50%) 7em 12.3em / 0.6em 1.5em,
+          radial-gradient(200% 130% at 100% 30%, $bk 49%, $bkT 50%) 6.8em 12.3em / 0.6em 1.5em,
+          radial-gradient(200% 200% at 100% 0%, $go 49%, $goT 50%) 6.7em 11.2em / 1.5em 0.7em,
+          radial-gradient(200% 200% at 100% 0%, $bk 49%, $bkT 50%) 6.6em 11.5em / 1.5em 0.7em,
+          radial-gradient(200% 130% at 100% 40%, $go 49%, $goT 50%) 6.5em 11.5em / 1.1em 2.6em,
+          radial-gradient(200% 130% at 100% 40%, $bk 49%, $bkT 50%) 6.2em 11.5em / 1.1em 2.6em,
+            /* lower-right wing of yellow stone base */
+          linear-gradient(-45deg, $goT 50%, $go 50%) 11.3em 17em / 0.6em 0.6em,
+          linear-gradient($bk, $bk) 12.5em 14.3em / 1.4em 0.4em,
+          linear-gradient($bk, $bk) 12.7em 15em / 0.9em 0.2em,
+          linear-gradient($bk, $bk) 12.4em 15.7em / 0.9em 0.2em,
+          linear-gradient($bk, $bk) 12.1em 16.4em / 0.9em 0.2em,
+          linear-gradient(-60deg, $bkT 1.55em, $bk 1.6em, $bk 1.95em, $bkT 2em) 12.2em 14.3em / 2em 3.5em,
+          linear-gradient(45deg, $bkT 0.45em, $bk 0.5em, $bk 0.85em, $bkT 0.9em) 11.5em 17em / 0.8em 0.8em,
+            /* upper-right wing outside yellow stone base */
+          linear-gradient(45deg, $go 50%, $goT 50%) 12.35em 13.4em / 1em 1em,
+          radial-gradient(125% 200% at 0% 0%, $go 49%, $goT 50%) 11.8em 12.3em / 1.5em 0.1em,
+          radial-gradient(125% 200% at 0% 0%, $bk 49%, $bkT 50%) 12.05em 12.3em / 1.5em 0.3em,
+          radial-gradient(200% 130% at 0% 30%, $go 49%, $goT 50%) 12.3em 12.3em / 0.6em 1.5em,
+          radial-gradient(200% 130% at 0% 30%, $bk 49%, $bkT 50%) 12.5em 12.3em / 0.6em 1.5em,
+          radial-gradient(200% 200% at 0% 0%, $go 49%, $goT 50%) 11.8em 11.2em / 1.5em 0.7em,
+          radial-gradient(200% 200% at 0% 0%, $bk 49%, $bkT 50%) 11.9em 11.5em / 1.5em 0.7em,
+          radial-gradient(200% 130% at 0% 40%, $go 49%, $goT 50%) 12.3em 11.5em / 1.1em 2.6em,
+          radial-gradient(200% 130% at 0% 40%, $bk 49%, $bkT 50%) 12.6em 11.5em / 1.1em 2.6em,
+            /* yellow stone base */
+          linear-gradient(5deg, $goT 0.45em, $go 0.5em, $go 0.75em, $goT 0.8em) 7.75em 11.5em / 2.25em 3em,
+          linear-gradient(30deg, $goT 1.6em, $go 1.65em, $go 1.85em, $goT 1.9em) 7.75em 11.5em / 4.5em 3em,
+          linear-gradient(55deg, $goT 2.3em, $go 2.35em, $go 2.55em, $goT 2.6em) 7.75em 11.5em / 4.5em 3em,
+          linear-gradient(90deg, $goT 2.1em, $go 2.15em, $go 2.45em, $goT 2.4em) 7.75em 11.5em / 4.5em 3em,
+          linear-gradient(-55deg, $goT 2.3em, $go 2.35em, $go 2.55em, $goT 2.6em) 7.75em 11.5em / 4.5em 3em,
+          linear-gradient(-30deg, $goT 1.6em, $go 1.65em, $go 1.85em, $goT 1.9em) 7.75em 11.5em / 4.5em 3em,
+          linear-gradient(-5deg, $goT 0.5em, $go 0.55em, $go 0.75em, $goT 0.8em) 10em 11.5em / 2.25em 3em,
+          linear-gradient(70deg, $goT 2.7em, $go 2.75em, $go 2.95em, $goT 3em) 7.75em 14.5em / 4.5em 3em,
+          linear-gradient(40deg, $goT 3.2em, $go 3.25em, $go 3.45em, $goT 3.5em) 7.75em 14.5em / 4.5em 3em,
+          linear-gradient(15deg, $goT 2.6em, $go 2.65em, $go 2.85em, $goT 2.9em) 10em 14.5em / 2.25em 3em,
+          linear-gradient(-70deg, $goT 2.7em, $go 2.75em, $go 2.95em, $goT 3em) 7.75em 14.5em / 4.5em 3em,
+          linear-gradient(-40deg, $goT 3.2em, $go 3.25em, $go 3.45em, $goT 3.5em) 7.75em 14.5em / 4.5em 3em,
+          linear-gradient(-15deg, $goT 2.6em, $go 2.65em, $go 2.85em, $goT 2.9em) 7.75em 14.5em / 2.25em 3em,
+          radial-gradient(4.5em 6em at 10em 14.6em, $bk 49.5%, $bkT 50%),
+            /* holes */
+          radial-gradient(0.4em 0.4em at 7.4em 8.2em, $bk 49%, $bkT 50%),
+          radial-gradient(0.4em 0.4em at 10em 8.2em, $bk 49%, $bkT 50%),
+          radial-gradient(0.4em 0.4em at 12.6em 8.2em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 4.6em 17.4em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 15.6em 17.4em, $bk 49%, $bkT 50%),
+            /* trapezoid with vents */
+          linear-gradient($bk, $bk) 9em 17.8em / 0.4em 0.7em,
+          linear-gradient($bk, $bk) 10.5em 17.8em / 0.4em 0.7em,
+          linear-gradient($bk, $bk) 8.5em 18.5em / 3em 0.6em,
+          linear-gradient($bk, $bk) 9em 19.8em / 0.4em 1em,
+          linear-gradient($bk, $bk) 9.75em 19.5em / 0.4em 1.6em,
+          linear-gradient($bk, $bk) 10.5em 19.8em / 0.4em 1em,
+          radial-gradient(3.7em 1em at 10em 20.75em, $go 49%, $goT 50%),
+          linear-gradient(110deg, $bkT 0.7em, $bk 0.7em, $bk 1.3em, $go 1.2em) 7.6em 18.5em / 2.5em 2.25em,
+          linear-gradient(-110deg, $bkT 0.7em, $bk 0.7em, $bk 1.3em, $go 1.2em) 9.9em 18.5em / 2.5em 2.25em,
+            /* palm */
+          radial-gradient(100% 200% at 50% 0%, $bk 49%, $bkT 50%) 9.5em 7.1em / 1em 0.5em,
+          radial-gradient(100% 200% at 50% 0%, $bk 49%, $bkT 50%) 12.5em 7.1em / 1em 0.5em,
+          linear-gradient(15deg, $bkT 0.55em, $bk 0.6em, $bk 1.15em, $bkT 1.2em) 13em 6.6em / 2.7em 1.2em,
+          linear-gradient($bk, $bk) 7.9em 6.6em / 5.25em 0.6em,
+          linear-gradient(130deg, $bkT 0.75em, $bk 0.8em, $bk 1.35em, $go 1.4em) 6.6em 6.6em / 6em 1.3em,
+          linear-gradient($bk, $bk) 5em 7.3em / 2em 0.6em,
+          radial-gradient(100% 200% at 50% 60%, $bkT 6.35em, $bk 6.4em, $bk 49.5%, $bkT 50%) 3em 7.3em / 14.2em 12.6em,
+          radial-gradient(100% 230% at 50% 70%, $go 49%, $goT 50%) 3.1em 7.3em / 14em 9.5em,
+          radial-gradient(110% 100% at 50% 0, $go 49%, $goT 50%) 3.5em 16.8em / 13.1em 4.2em,
+          radial-gradient(120% 100% at 50% 0, $bk 49%, $bkT 50%) 3.5em 17.4em / 13.1em 4.2em,
+          radial-gradient(120% 100% at 50% 0, $mgo 49%, $mgoT 50%) 3.6em 17.8em / 12.9em 4.8em,
+          radial-gradient(150% 100% at 50% 0, $bk 49%, $bkT 50%) 4em 17.5em / 12.1em 6.8em,
+            /** fingers **/
+            /* pinky */
+          radial-gradient(0.5em 0.5em at 5.6em 4em, $bk 49%, $bkT 50%),
+          linear-gradient($bk, $bk) 5.35em 4em / 0.5em 1em,
+          radial-gradient(0.5em 0.5em at 5.6em 6.25em, $bk 49%, $bkT 50%),
+          linear-gradient($bk, $bk) 5.35em 6.25em / 0.5em 1.25em,
+          linear-gradient($bk 0.6em, $bkT 0.6em, $bkT 1.1em, $bk 1.1em, $bk 1.8em, $bkT 1.8em, $bkT 3.3em, $bk 3.3em, $bk 4em, $bkT 4em) 4.6em 1.5em / 2em 6.5em,
+          linear-gradient(90deg, $bk 0.6em, $go 0.6em, $go 2.2em, $bk 2.2em) 4.2em 1.5em / 2.8em 6.5em,
+            /* ring */
+          radial-gradient(0.5em 0.5em at 8.5em 2.6em, $bk 49%, $bkT 50%),
+          linear-gradient($bk, $bk) 8.25em 2.6em / 0.5em 0.5em,
+          radial-gradient(0.5em 0.5em at 8.5em 4.2em, $bk 49%, $bkT 50%),
+          linear-gradient($bk, $bk) 8.25em 4.2em / 0.5em 0.8em,
+          radial-gradient(0.5em 0.5em at 8.5em 5em, $bk 49%, $bkT 50%),
+          radial-gradient(200% 200% at 50% 0, $bkT 0.65em, $bk 0.7em, $bk 49%, $bkT 50%) 7.1em 5.25em / 2.8em 0.8em,
+          linear-gradient($bk 0.6em, $bkT 0.6em, $bkT 1.1em, $bk 1.1em, $bk 1.8em, $bkT 1.8em, $bkT 2.5em, $bk 2.5em, $bk 3.2em, $bkT 3.2em) 7.3em 0.5em / 2em 6.5em,
+          linear-gradient(90deg, $bk 0.6em, $go 0.6em, $go 2.2em, $bk 2.2em) 7.1em 0.5em / 2.8em 7.5em,
+            /* middle */
+          radial-gradient(0.5em 0.5em at 11.4em 2.4em, $bk 49%, $bkT 50%),
+          linear-gradient($bk, $bk) 11.15em 2.3em / 0.5em 0.5em,
+          radial-gradient(0.5em 0.5em at 11.4em 4.2em, $bk 49%, $bkT 50%),
+          linear-gradient($bk, $bk) 11.15em 4.2em / 0.5em 0.8em,
+          radial-gradient(0.5em 0.5em at 11.4em 5em, $bk 49%, $bkT 50%),
+          radial-gradient(200% 200% at 50% 0, $bkT 0.65em, $bk 0.7em, $bk 49%, $bkT 50%) 10em 5.25em / 2.8em 0.8em,
+          linear-gradient($bk 0.6em, $bkT 0.6em, $bkT 1.3em, $bk 1.3em, $bk 2em, $bkT 2em, $bkT 2.7em, $bk 2.7em, $bk 3.4em, $bkT 3.4em) 10.5em 0 / 2em 6.5em,
+          linear-gradient(90deg, $bk 0.6em, $go 0.6em, $go 2.2em, $bk 2.2em) 10em 0 / 2.8em 8em,
+            /* index */
+          radial-gradient(0.5em 0.5em at 14.4em 3.5em, $bk 49%, $bkT 50%),
+          linear-gradient($bk, $bk) 14.15em 3.6em / 0.5em 0.5em,
+          radial-gradient(0.5em 0.5em at 14.4em 5.3em, $bk 49%, $bkT 50%),
+          linear-gradient($bk, $bk) 14.15em 5.4em / 0.5em 2em,
+          linear-gradient($bk 0.6em, $bkT 0.6em, $bkT 0.9em, $bk 0.9em, $bk 1.6em, $bkT 1.6em, $bkT 2em, $bk 2em, $bk 2.7em, $bkT 2.7em, $bkT 3.3em, $bk 3.3em, $bk 3.9em, $bkT 3.9em) 13.3em 0.5em / 2em 6.5em,
+          linear-gradient(90deg, $bk 0.6em, $go 0.6em, $go 2.2em, $bk 2.2em) 13em 0.5em / 2.8em 7.5em,
+            /* thumb and green stone */
+          radial-gradient(1.2em 0.6em at 20em 10.5em, $bk 49.75%, $bkT 50%),
+          radial-gradient(1.2em 0.6em at 18.3em 13.7em, $bk 49.75%, $bkT 50%),
+          linear-gradient(-30deg, $bkT 0.4em, $bk 0.4em, $bk 0.9em, $bkT 0.9em) 17em 13.4em / 1em 1em,
+          radial-gradient(100% 200% at 50% 100%, $go 49.75%, $goT 50%) 18.1em 9.7em / 2.2em 1.7em,
+          radial-gradient(100% 200% at 50% 100%, $bk 49.75%, $bkT 50%) 17.5em 9em / 3.5em 2.4em,
+          linear-gradient(90deg, $bk 0.6em, $go 0.6em, $go 2.8em, $bk 2.8em) 17.5em 11em / 3.5em 3em,
+          radial-gradient(200% 200% at 0 0, $bkT 4.45em, $bk 4.5em, $bk 49.75%, $bkT 50%) 15.8em 13.9em / 5.2em 6em,
+          radial-gradient(200% 200% at 100% 100%, $bkT 1.95em, $bk 2em, $bk 2.25em, $mgo 2.3em, $mgo 2.55em, $bk 2.6em, $bk 49.75%, $bkT 50%) 17.2em 14.9em / 3em 4em,
+          radial-gradient(0.4em 0.4em at 19em 17.2em, $w 49%, $wT 50%),
+          radial-gradient(200% 200% at 0 0, $gr 49.75%, $grT 50%) 18.25em 16.25em / 1.6em 2em,
+          radial-gradient(200% 200% at 0 0, $go 4.45em, $goT 4.5em) 15.8em 13.9em / 5.2em 6em,
+            /** middle wrist **/
+            /* triangles */
+          linear-gradient(90deg, $bk 1.25em, $bkT 1.25em, $bkT 1.75em, $bk 1.75em) 8.5em 23em / 3em 0.3em,
+          linear-gradient(90deg, $bk 0.3em, $bkT 0.3em, $bkT 0.7em, $bk 0.7em) 9.5em 23em / 1em 2em,
+          linear-gradient(60deg, $bkT 1em, $bk 1em, $bk 1.3em, $dgo 1.3em) 8.25em 23em / 1.5em 2em,
+          linear-gradient(-60deg, $bkT 1em, $bk 1em, $bk 1.3em, $dgo 1.3em) 10.25em 23em / 1.5em 2em,
+            /* left vents */
+          repeating-linear-gradient(-164deg, $bkT, $bkT 0.28em, $bk 0.3em, $bk 0.86em) 8.4em 25em / 1em 8.1em,
+          radial-gradient(0.6em 0.6em at 8.5em 25.3em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 8.5em 26.2em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 8.5em 27.1em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 8.5em 28em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 8.5em 28.9em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 8.5em 29.8em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 8.5em 30.7em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 8.5em 31.6em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 8.5em 32.5em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 9.5em 25.6em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 9.5em 26.5em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 9.5em 27.4em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 9.5em 28.3em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 9.5em 29.2em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 9.5em 30.1em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 9.5em 31em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 9.5em 31.9em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 9.5em 32.8em, $bk 49%, $bkT 50%),
+            /* right vents */
+          repeating-linear-gradient(164deg, $bkT, $bkT 0.28em, $bk 0.3em, $bk 0.86em) 10.6em 25em / 1em 8.1em,
+          radial-gradient(0.6em 0.6em at 10.5em 25.6em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 10.5em 26.5em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 10.5em 27.4em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 10.5em 28.3em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 10.5em 29.2em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 10.5em 30.1em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 10.5em 31em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 10.5em 31.9em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 10.5em 32.8em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 11.5em 25.3em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 11.5em 26.2em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 11.5em 27.1em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 11.5em 28em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 11.5em 28.9em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 11.5em 29.8em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 11.5em 30.7em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 11.5em 31.6em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 11.5em 32.5em, $bk 49%, $bkT 50%),
+            /* parallel vents */
+          linear-gradient(90deg, $bk 0.6em, $bkT 0.6em, $bkT 1em, $bk 1em) 9.2em 32.9em / 1.6em 1.1em,
+          radial-gradient(0.6em 0.6em at 9.5em 34em, $bk 49%, $bkT 50%),
+          radial-gradient(0.6em 0.6em at 10.5em 34em, $bk 49%, $bkT 50%),
+            /* curved slightly dark lines */
+          radial-gradient(0.7em 0.7em at 7.5em 25.2em, $dgo 49%, $dgoT 50%),
+          radial-gradient(0.7em 0.7em at 12.5em 25.2em, $dgo 49%, $dgoT 50%),
+          radial-gradient(100% 310% at 50% 85%, $dgoT 2.85em, $dgo 2.9em, $dgo 3em, $dgo 3em, $dgo 3.45em, $dgoT 3.5em) 6.5em 25.25em / 7em 7.25em,
+          radial-gradient(0.6em 0.6em at 6.85em 32.5em, $dgo 49%, $dgoT 50%),
+          radial-gradient(0.6em 0.6em at 13.15em 32.5em, $dgo 49%, $dgoT 50%),
+            /* corner holes */
+          radial-gradient(0.4em 0.4em at 7.6em 22.5em, $bk 49%, $bkT 50%),
+          radial-gradient(0.4em 0.4em at 12.4em 22.5em, $bk 49%, $bkT 50%),
+          radial-gradient(0.4em 0.4em at 6.2em 33.8em, $bk 49%, $bkT 50%),
+          radial-gradient(0.4em 0.4em at 13.8em 33.8em, $bk 49%, $bkT 50%),
+            /* curve */
+          radial-gradient(100% 200% at 50% 0%, $mgo 49%, $mgoT 50%) 6.8em 34em / 6.3em 0.7em,
+          radial-gradient(100% 200% at 50% 0%, $bk 49%, $bkT 50%) 6.6em 34em / 6.7em 1em,
+            /* main */
+          radial-gradient(100% 200% at 50% 0, $go 49.5%, $goT 50%) 7.1em 20.9em / 5.8em 0.7em,
+          radial-gradient(210% 100% at 50% 0, $bk 3.9em, $mgo 3.95em) 7.4em 20.9em / 5.2em 4.1em,
+          linear-gradient(120deg, $bkT 1.2em, $bk 1.25em, $bk 1.95em, $mgo 2em) 5.8em 20.9em / 1.7em 2.5em,
+          linear-gradient(-120deg, $bkT 1.2em, $bk 1.25em, $bk 1.95em, $mgo 2em) 12.5em 20.9em / 1.7em 2.5em,
+          linear-gradient(45deg, $bkT 0.7em, $bk 0.75em, $bk 1.34em, $mgo 1.35em) 5.4em 23.4em / 4.6em 0.7em,
+          linear-gradient(-45deg, $bkT 0.7em, $bk 0.75em, $bk 1.34em, $mgo 1.35em) 10em 23.4em / 4.6em 0.7em,
+          radial-gradient(100% 290% at 50% 100%, $mgo 4.35em, $bk 4.4em, $bk 49.5%, $bkT 50%) 5em 24em / 10em 10em,
+          radial-gradient(100% 200% at 50% 0%, $mgo 49.5%, $mgoT 50%) 5.6em 34em / 8.75em 1.5em,
+          radial-gradient(100% 200% at 50% 0%, $bk 49.5%, $bkT 50%) 5em 34em / 10em 2em,
+            /** wrist **/
+            /* curved dark lines */
+          radial-gradient(0.7em 0.7em at 5.15em 24em, $bk 49%, $bkT 50%),
+          radial-gradient(0.7em 0.7em at 14.85em 24em, $bk 49%, $bkT 50%),
+          radial-gradient(100% 400% at 50% 125%, $bkT 6.15em, $bk 6.2em, $bk 6.4em, $bk 49.5%, $bkT 50%) 3.25em 24em / 13.5em 8.5em,
+          radial-gradient(0.55em 0.55em at 3.6em 32.5em, $bk 49%, $bkT 50%),
+          radial-gradient(0.55em 0.55em at 16.4em 32.5em, $bk 49%, $bkT 50%),
+          radial-gradient(300% 200% at 150% 0%, $go 49.75%, $goT 50%) 1.8em 32.8em / 8.4em 4.2em,
+          radial-gradient(305% 200% at 150% 0%, $bk 49.75%, $bkT 50%) 1.3em 32.8em / 8.9em 4.7em,
+          radial-gradient(300% 200% at -50% 0%, $go 49.75%, $goT 50%) 10em 32.8em / 8.4em 4.2em,
+          radial-gradient(305% 200% at -50% 0%, $bk 49.75%, $bkT 50%) 10em 32.8em / 8.9em 4.7em,
+            /* bottom */
+          linear-gradient(102deg, $bkT 3.1em, $bk 3.15em, $bk 3.75em, $go 3.8em) 0.9em 19em / 9.3em 15em,
+          linear-gradient(-102deg, $bkT 3.1em, $bk 3.15em, $bk 3.75em, $go 3.8em) 10em 19em / 9.3em 15em,
+          radial-gradient(0.8em 0.8em at 2.5em 35.8em, $bk 49%, $bkT 50%),
+          radial-gradient(0.8em 0.8em at 3.7em 36.6em, $bk 49%, $bkT 50%),
+          radial-gradient(0.8em 0.8em at 5.1em 37.3em, $bk 49%, $bkT 50%),
+          radial-gradient(0.8em 0.8em at 6.6em 37.8em, $bk 49%, $bkT 50%),
+          radial-gradient(0.8em 0.8em at 8.3em 38.2em, $bk 49%, $bkT 50%),
+          radial-gradient(0.8em 0.8em at 10.1em 38.4em, $bk 49%, $bkT 50%),
+          radial-gradient(0.8em 0.8em at 11.9em 38.2em, $bk 49%, $bkT 50%),
+          radial-gradient(0.8em 0.8em at 13.6em 37.8em, $bk 49%, $bkT 50%),
+          radial-gradient(0.8em 0.8em at 15.2em 37.3em, $bk 49%, $bkT 50%),
+          radial-gradient(0.8em 0.8em at 16.6em 36.6em, $bk 49%, $bkT 50%),
+          radial-gradient(0.8em 0.8em at 17.8em 35.8em, $bk 49%, $bkT 50%),
+          linear-gradient(105deg, $bkT 3.35em, $bk 3.4em, $bk 3.9em, $mgo 3.95em) 0em 19.2em / 9.3em 12.9em,
+          linear-gradient(45deg, $bkT 0.75em, $bk 0.8em, $bk 1.15em, $mgo 1.2em) 0em 32.1em / 1.5em 1.1em,
+          linear-gradient(-105deg, $bkT 3.35em, $bk 3.4em, $bk 3.9em, $mgo 3.95em) 10.9em 19.2em / 9.3em 12.9em,
+          linear-gradient(-45deg, $bkT 0.75em, $bk 0.8em, $bk 1.15em, $mgo 1.2em) 18.7em 32.1em / 1.5em 1.1em,
+          linear-gradient(102deg, $bkT 0.18em, $bk 0.23em, $bk 0.83em, $mgo 0.88em) 0.7em 34em / 2.5em 1em,
+          linear-gradient(-102deg, $bkT 0.18em, $bk 0.23em, $bk 0.83em, $mgo 0.88em) 17em 34em / 2.5em 1em,
+          radial-gradient(200% 200% at 100% 0%, $mgo 49.75%, $mgoT 50%) 1.35em 35em / 8.8em 4.4em,
+          radial-gradient(200% 200% at 0% 0%, $mgo 49.75%, $mgoT 50%) 10.05em 35em / 8.8em 4.4em,
+          radial-gradient(200% 200% at 100% 0%, $bk 49.75%, $bkT 50%) 0.7em 35em / 9.4em 5em,
+          radial-gradient(200% 200% at 0% 0%, $bk 49.75%, $bkT 50%) 10.1em 35em / 9.4em 5em;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  margin: 3em auto 0 auto;
+  width: 21em;
+  height: 40em;
+
+  &:before {
+    animation: twinkle 4s linear infinite;
+    background: linear-gradient(-15deg, $ow 23%, $wT 25%) 0 0 / 50% 50%,
+    linear-gradient(-75deg, $ow 23%, $wT 25%) 0 0 / 50% 50%,
+    linear-gradient(15deg, $ow 23%, $wT 25%) 100% 0 / 50% 50%,
+    linear-gradient(75deg, $ow 23%, $wT 25%) 100% 0 / 50% 50%,
+    linear-gradient(15deg, $wT 73%, $ow 75%) 0 100% / 50% 50%,
+    linear-gradient(75deg, $wT 73%, $ow 75%) 0 100% / 50% 50%,
+    linear-gradient(-15deg, $wT 73%, $ow 75%) 100% 100% / 50% 50%,
+    linear-gradient(-75deg, $wT 73%, $ow 75%) 100% 100% / 50% 50%;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    width: 2em;
+    height: 2em;
+    transform: translate(5em, 8.5em) scale(0);
+  }
+}
+
+@keyframes twinkle {
+  from {
+    transform: translate(5em, 8.5em) rotate(0) scale(0);
+  }
+  8% {
+    transform: translate(5em, 8.5em) rotate(180deg) scale(1);
+  }
+  16% {
+    transform: translate(5em, 8.5em) rotate(360deg) scale(0);
+  }
+  17% {
+    transform: translate(7.5em, 8.5em) rotate(0) scale(0);
+  }
+  24% {
+    transform: translate(7.5em, 8.5em) rotate(180deg) scale(1);
+  }
+  32% {
+    transform: translate(7.5em, 8.5em) rotate(360deg) scale(0);
+  }
+  33% {
+    transform: translate(10.25em, 8.5em) rotate(0) scale(0);
+  }
+  40% {
+    transform: translate(10.25em, 8.5em) rotate(180deg) scale(1);
+  }
+  48% {
+    transform: translate(10.25em, 8.5em) rotate(360deg) scale(0);
+  }
+  49% {
+    transform: translate(12.75em, 8.5em) rotate(0) scale(0);
+  }
+  56% {
+    transform: translate(12.75em, 8.5em) rotate(180deg) scale(1);
+  }
+  64% {
+    transform: translate(12.75em, 8.5em) rotate(360deg) scale(0);
+  }
+  65% {
+    transform: translate(18em, 16em) rotate(0) scale(0);
+  }
+  72% {
+    transform: translate(18em, 16em) rotate(180deg) scale(1);
+  }
+  80% {
+    transform: translate(18em, 16em) rotate(360deg) scale(0);
+  }
+  81% {
+    transform: translate(9em, 13.5em) rotate(0) scale(0);
+  }
+  88% {
+    transform: translate(9em, 13.5em) rotate(180deg) scale(1.5);
+  }
+  96%, to {
+    transform: translate(9em, 13.5em) rotate(360deg) scale(0);
+  }
+}
