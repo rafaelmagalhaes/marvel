@@ -41,12 +41,3 @@
 .character__cards__href:hover {
     color: black;
 }
-
-@media only screen and (min-device-width: 768px)and (max-device-width: 1024px) {
-  /* For general iPad layouts */
-      .character__Cards .image-container {
-        height: auto;
-    }
-}
-
-

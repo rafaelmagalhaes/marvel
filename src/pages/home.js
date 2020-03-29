@@ -42,7 +42,10 @@ const HomePage = ({
             <div className="pt-3">
               <div className="row">
                 {characters.map((character) => (
-                  <div className="col-xl-3 col-12 mb-3" key={character.id}>
+                  <div
+                    className="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 mb-3"
+                    key={character.id}
+                  >
                     <CharacterCard
                       id={character.id}
                       thumbnail={character.thumbnail}
