@@ -100,10 +100,19 @@ const ConnectedCharacterPage = (props) => {
     updateName(name);
   };
 
-  const handleImageChange = (file) => {
-    base64(file.target.files[0], (result) => {
-      setImage({ path: result, extension: "" });
-    });
+  const handleImageChange = (e) => {
+    let numb = e.target.files[0].size / 1024 / 1024;
+    numb = numb.toFixed(2);
+    if (numb > 1) {
+      alert(
+        "to big, maximum image size is 1MB. Your image size is: " + numb + " MB"
+      );
+      e.target.value = "";
+    } else {
+      base64(e.target.files[0], (result) => {
+        setImage({ path: result, extension: "" });
+      });
+    }
   };
   const isFetching = useSelector((state) => state.isFetching);
   return (
