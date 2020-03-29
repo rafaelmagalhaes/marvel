@@ -1,9 +1,12 @@
 import React, { useEffect } from "react";
 import { fetchCharacters } from "../redux/actions";
+import { useHistory } from "react-router-dom";
+
 import CharacterCard from "../components/CharacterCard/";
 import { useDispatch, useSelector } from "react-redux";
 import { DebounceInput } from "react-debounce-input";
 import ReactPaginate from "react-paginate";
+import queryString from "query-string";
 
 import Loader from "../components/Loader";
 const HomePage = ({
@@ -76,18 +79,27 @@ const HomePage = ({
     </div>
   );
 };
-const ConnectedHomePage = (props) => {
+const ConnectedHomePage = ({ location }) => {
   const dispatch = useDispatch();
   const [search, setSearch] = React.useState("");
-  const { limit, total, results, offset } = useSelector((state) => state);
+  const { limit, total, results, isFetching } = useSelector((state) => state);
   const [page, setPage] = React.useState(0);
-  useEffect(() => {
-    dispatch(fetchCharacters());
+  const history = useHistory();
 
+  let offset = queryString.parse(location.search).offset
+    ? queryString.parse(location.search).offset
+    : 0;
+
+  useEffect(() => {
+    dispatch(fetchCharacters(parseInt(offset)));
+    if (queryString.parse(location.search).offset) {
+      setPage(parseInt(offset) / limit);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [offset]);
   const pageCount = Math.ceil(total / limit);
   const characters = results;
+
   const handleSearchFunc = (event) => {
     let search_text = event.target.value.toLowerCase();
     setSearch(search_text);
@@ -100,18 +112,19 @@ const ConnectedHomePage = (props) => {
     });
   }
 
-  const isFetching = useSelector((state) => state.isFetching);
   const handlePageClick = ({ selected }) => {
-    let updateOffset;
     if (selected !== 1) {
-      updateOffset = selected * limit;
+      offset = selected * limit;
     } else if (selected === 1) {
-      updateOffset = 12;
+      offset = 12;
     } else {
-      updateOffset = 0;
+      offset = 0;
     }
+    history.push({
+      pathname: "/",
+      search: `?offset=${offset}`,
+    });
     setPage(selected);
-    dispatch(fetchCharacters(updateOffset));
   };
   return (
     <HomePage
