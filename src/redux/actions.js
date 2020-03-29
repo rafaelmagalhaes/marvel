@@ -42,11 +42,17 @@ const updateCharacterDetails = (data) => {
   };
 };
 
-export const fetchCharacters = () => {
+export const fetchCharacters = (offset) => {
   return async (dispatch, getState) => {
     const characterUpdated = getState().characterUpdated;
     dispatch(requestCharacters());
-    let url = API("characters");
+    let url;
+
+    if (offset) {
+      url = API("characters", offset);
+    } else {
+      url = API("characters");
+    }
     try {
       const response = await fetch(url);
       if (!response.ok) {

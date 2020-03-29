@@ -3,8 +3,18 @@ import { fetchCharacters } from "../redux/actions";
 import CharacterCard from "../components/CharacterCard/";
 import { useDispatch, useSelector } from "react-redux";
 import { DebounceInput } from "react-debounce-input";
+import ReactPaginate from "react-paginate";
+
 import Loader from "../components/Loader";
-const HomePage = ({ characters, isFetching, handleSearchFunc, search }) => {
+const HomePage = ({
+  characters,
+  isFetching,
+  handleSearchFunc,
+  search,
+  pageCount,
+  page,
+  handlePageClick,
+}) => {
   return (
     <div className="App">
       {isFetching ? (
@@ -37,6 +47,26 @@ const HomePage = ({ characters, isFetching, handleSearchFunc, search }) => {
                   />
                 </div>
               ))}
+              <div className="col">
+                <div className="d-flex justify-content-center">
+                  <ReactPaginate
+                    previousLabel={"previous"}
+                    marginPagesDisplayed={2}
+                    pageRangeDisplayed={5}
+                    forcePage={page}
+                    pageCount={pageCount}
+                    onPageChange={handlePageClick}
+                    containerClassName={"pagination"}
+                    pageClassName={"page-item"}
+                    pageLinkClassName={"page-link"}
+                    previousClassName={"page-item"}
+                    previousLinkClassName={"page-link"}
+                    nextClassName={"page-item"}
+                    nextLinkClassName={"page-link"}
+                    activeClassName={"active"}
+                  />
+                </div>
+              </div>
             </div>
           ) : (
             <div className="container">No characters found!</div>
@@ -49,14 +79,15 @@ const HomePage = ({ characters, isFetching, handleSearchFunc, search }) => {
 const ConnectedHomePage = (props) => {
   const dispatch = useDispatch();
   const [search, setSearch] = React.useState("");
-
+  const { limit, total, results, offset } = useSelector((state) => state);
+  const [page, setPage] = React.useState(0);
   useEffect(() => {
     dispatch(fetchCharacters());
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  const characters = useSelector((state) => state.results);
-
+  const pageCount = Math.ceil(total / limit);
+  const characters = results;
   const handleSearchFunc = (event) => {
     let search_text = event.target.value.toLowerCase();
     setSearch(search_text);
@@ -70,13 +101,27 @@ const ConnectedHomePage = (props) => {
   }
 
   const isFetching = useSelector((state) => state.isFetching);
-
+  const handlePageClick = ({ selected }) => {
+    let updateOffset;
+    if (selected !== 1) {
+      updateOffset = selected * limit;
+    } else if (selected === 1) {
+      updateOffset = 12;
+    } else {
+      updateOffset = 0;
+    }
+    setPage(selected);
+    dispatch(fetchCharacters(updateOffset));
+  };
   return (
     <HomePage
       characters={filter_characters}
       search={search}
       handleSearchFunc={handleSearchFunc}
       isFetching={isFetching}
+      pageCount={pageCount}
+      page={page}
+      handlePageClick={handlePageClick}
     />
   );
 };
