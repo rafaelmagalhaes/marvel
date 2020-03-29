@@ -58,7 +58,7 @@ const HomePage = ({
                     <ReactPaginate
                       previousLabel={"previous"}
                       marginPagesDisplayed={2}
-                      pageRangeDisplayed={5}
+                      pageRangeDisplayed={2}
                       forcePage={page}
                       pageCount={pageCount}
                       onPageChange={handlePageClick}
