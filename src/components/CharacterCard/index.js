@@ -15,7 +15,7 @@ const Index = ({ id, name, thumbnail, description }) => {
       img[0].src = imageURL;
       getBase64Image(img[0]);
     }
-  }, []);
+  });
   return (
     <div className="card character__Cards h-100">
       <div className="image-container">

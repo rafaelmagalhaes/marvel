@@ -33,17 +33,29 @@ const Index = ({
             </button>
           </div>
           <div className="modal-body">
-            <input
-              onChange={(e) => handleNameInputChanges(e.target.value)}
-              type="text"
-              placeholder="Name"
-              defaultValue={name}
-            />
-            <input
-              type="file"
-              accept="image/x-png,image/gif,image/jpeg"
-              onChange={handleImageChange.bind(this)}
-            />
+            <form>
+              <div className="form-group row">
+                <label className="col-sm-2 col-form-label">Name</label>
+                <div className="col-sm-10">
+                  <input
+                    onChange={(e) => handleNameInputChanges(e.target.value)}
+                    type="text"
+                    placeholder="Name"
+                    defaultValue={name}
+                  />
+                </div>
+              </div>
+              <div className="form-group row">
+                <label className="col-sm-2 col-form-label">Image</label>
+                <div className="col-sm-10">
+                  <input
+                    type="file"
+                    accept="image/x-png,image/gif,image/jpeg"
+                    onChange={handleImageChange.bind(this)}
+                  />{" "}
+                </div>
+              </div>
+            </form>
           </div>
           <div className="modal-footer">
             <button

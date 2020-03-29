@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Image from "react-graceful-image";
 
 import Items from "../Items";

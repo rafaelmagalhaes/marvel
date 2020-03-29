@@ -59,7 +59,9 @@ const ConnectedCharacterPage = (props) => {
   const dispatch = useDispatch();
   const [updatedName, updateName] = useState("");
   const [updateImage, setImage] = useState({});
-
+  const character = useSelector((state) =>
+    state.results.find((character) => character.id === parseInt(id))
+  );
   useEffect(() => {
     dispatch(fetchSingleCharacter(id));
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -69,10 +71,6 @@ const ConnectedCharacterPage = (props) => {
       getBase64Image(img[0]);
     }
   }, [id]);
-
-  const character = useSelector((state) =>
-    state.results.find((character) => character.id === parseInt(id))
-  );
 
   const updateCharacter = (e) => {
     e.preventDefault();
