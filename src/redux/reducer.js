@@ -39,7 +39,6 @@ const characters = (
       return Object.assign({}, state, {
         isFetching: false,
         ...action.data,
-        total: 40, //overrider the total
         results: mergeById(action.data.results, state.results),
       });
     case UPDATE_CHARACTER:

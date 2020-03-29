@@ -39,35 +39,41 @@ const HomePage = ({
             </div>
           </div>
           {characters && characters.length ? (
-            <div className="row pt-3">
-              {characters.map((character) => (
-                <div className="col-xl-3 col-12 mb-3" key={character.id}>
-                  <CharacterCard
-                    id={character.id}
-                    thumbnail={character.thumbnail}
-                    name={character.name}
-                    description={character.description}
-                  />
-                </div>
-              ))}
-              <div className="col">
-                <div className="d-flex justify-content-center">
-                  <ReactPaginate
-                    previousLabel={"previous"}
-                    marginPagesDisplayed={2}
-                    pageRangeDisplayed={5}
-                    forcePage={page}
-                    pageCount={pageCount}
-                    onPageChange={handlePageClick}
-                    containerClassName={"pagination"}
-                    pageClassName={"page-item"}
-                    pageLinkClassName={"page-link"}
-                    previousClassName={"page-item"}
-                    previousLinkClassName={"page-link"}
-                    nextClassName={"page-item"}
-                    nextLinkClassName={"page-link"}
-                    activeClassName={"active"}
-                  />
+            <div className="pt-3">
+              <div className="row">
+                {characters.map((character) => (
+                  <div className="col-xl-3 col-12 mb-3" key={character.id}>
+                    <CharacterCard
+                      id={character.id}
+                      thumbnail={character.thumbnail}
+                      name={character.name}
+                      description={character.description}
+                    />
+                  </div>
+                ))}
+              </div>
+              <div className="row">
+                <div className="col">
+                  <div className="d-flex justify-content-center">
+                    <ReactPaginate
+                      previousLabel={"previous"}
+                      marginPagesDisplayed={2}
+                      pageRangeDisplayed={5}
+                      forcePage={page}
+                      pageCount={pageCount}
+                      onPageChange={handlePageClick}
+                      containerClassName={"pagination"}
+                      pageClassName={"page-item"}
+                      pageLinkClassName={"page-link"}
+                      previousClassName={"page-item"}
+                      breakClassName={"page-item"}
+                      breakLinkClassName={"page-link"}
+                      previousLinkClassName={"page-link"}
+                      nextClassName={"page-item"}
+                      nextLinkClassName={"page-link"}
+                      activeClassName={"active"}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
