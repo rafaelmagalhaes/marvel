@@ -20,14 +20,14 @@ const Index = ({
 
   return (
     <div className="row">
-      <div className="col">
+      <div className="col-12 col-xl-6 col-lg-6 col-md-12 ">
         <Image
           className={`card-img-top character-${id} `}
           src={imageURL}
           alt=""
         />
       </div>
-      <div className="col">
+      <div className="col-12 col-xl-6 col-lg-6 col-md-12">
         <div className="card" style={{ width: "100%" }}>
           <div className="card-body d-flex flex-column">
             <h5 className="character__cards__href card-title text-capitalize">
